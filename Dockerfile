@@ -3,7 +3,7 @@ MAINTAINER Sergey Kandyla <skandyla@gmail.com>
 
 RUN echo "===> Installing  tools..."  && \
     apt-get -y update && \
-    apt-get -y install build-essential curl apache2-utils iproute2 iputils-ping && \
+    apt-get -y install build-essential curl apache2-utils iproute2 iputils-ping tcpdump && \
     \
     echo "===> Installing wrk" && \
     WRK_VERSION=$(curl -L https://github.com/wg/wrk/raw/master/CHANGES 2>/dev/null | \
