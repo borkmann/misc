@@ -1,9 +1,9 @@
-FROM       ubuntu:16.04
+FROM       ubuntu:16.10
 MAINTAINER Sergey Kandyla <skandyla@gmail.com>
 
 RUN echo "===> Installing  tools..."  && \
     apt-get -y update && \
-    apt-get -y install build-essential curl apache2-utils iproute2 ethtool strace iputils-ping tcpdump && \
+    apt-get -y install build-essential curl apache2-utils iproute2 ethtool strace iputils-ping tcpdump iperf3 && \
     \
     echo "===> Installing wrk" && \
     WRK_VERSION=$(curl -L https://github.com/wg/wrk/raw/master/CHANGES 2>/dev/null | \
